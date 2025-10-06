@@ -191,6 +191,235 @@
             background: rgba(26, 26, 46, 0.5);
         }
 
+        .special-section {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(26, 26, 46, 0.8) 100%);
+            border-top: 2px solid rgba(255, 107, 53, 0.3);
+            border-bottom: 2px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .special-card {
+            border: 2px solid rgba(255, 107, 53, 0.3);
+            background: rgba(255, 107, 53, 0.05);
+        }
+
+        .special-card:hover {
+            border-color: rgba(255, 107, 53, 0.8);
+            box-shadow: 0 20px 60px rgba(255, 107, 53, 0.5);
+        }
+
+        .cart-link {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .cart-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.5);
+        }
+
+        .cart-link::after {
+            display: none;
+        }
+
+        #cart-count {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .cart-section {
+            padding: 100px 50px;
+            background: rgba(10, 10, 10, 0.8);
+            min-height: 60vh;
+        }
+
+        .cart-section h2 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #fff, #ff6b35);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .cart-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-empty {
+            text-align: center;
+            color: #aaa;
+            font-size: 20px;
+            padding: 60px;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto auto auto;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        .cart-item:hover {
+            background: rgba(255, 107, 53, 0.05);
+            border-color: rgba(255, 107, 53, 0.3);
+        }
+
+        .cart-item-icon {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .cart-item-info h4 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-info p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .cart-item-price {
+            font-size: 22px;
+            color: #ff6b35;
+            font-weight: bold;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 10px;
+            border-radius: 25px;
+        }
+
+        .quantity-btn {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            border: none;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.5);
+        }
+
+        .quantity-display {
+            min-width: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .remove-btn {
+            background: rgba(255, 50, 50, 0.2);
+            border: 1px solid rgba(255, 50, 50, 0.5);
+            color: #ff5050;
+            padding: 8px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .remove-btn:hover {
+            background: rgba(255, 50, 50, 0.4);
+            transform: scale(1.05);
+        }
+
+        .cart-summary {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .cart-summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-summary-row:last-child {
+            border-bottom: none;
+        }
+
+        .cart-total {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+        }
+
+        .checkout-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .continue-shopping {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .continue-shopping a {
+            color: #ff6b35;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .continue-shopping a:hover {
+            color: #f7931e;
+        }
+
         .products h2 {
             text-align: center;
             font-size: 48px;
@@ -368,8 +597,10 @@
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#produits">Produits</a></li>
+            <li><a href="#zachary">Spécial Zachary</a></li>
             <li><a href="#features">Avantages</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#panier" class="cart-link">🛒 Panier (<span id="cart-count">0</span>)</a></li>
         </ul>
     </nav>
 
@@ -390,21 +621,21 @@
                 <h3 class="product-title">Corde Pro Series</h3>
                 <p class="product-desc">Résistance maximale pour usage professionnel. Fibres haute performance.</p>
                 <div class="product-price">89.99 €</div>
-                <button class="buy-button">Ajouter au panier</button>
+                <button class="buy-button" onclick="addToCart('Corde Pro Series', 89.99, '🧵')">Ajouter au panier</button>
             </div>
             <div class="product-card">
                 <div class="product-image">⚡</div>
                 <h3 class="product-title">Corde Extreme</h3>
                 <p class="product-desc">Pour les conditions extrêmes. Résiste aux UV et à l'humidité.</p>
                 <div class="product-price">129.99 €</div>
-                <button class="buy-button">Ajouter au panier</button>
+                <button class="buy-button" onclick="addToCart('Corde Extreme', 129.99, '⚡')">Ajouter au panier</button>
             </div>
             <div class="product-card">
                 <div class="product-image">🎯</div>
                 <h3 class="product-title">Corde Precision</h3>
                 <p class="product-desc">Légère et maniable. Idéale pour les travaux de précision.</p>
                 <div class="product-price">69.99 €</div>
-                <button class="buy-button">Ajouter au panier</button>
+                <button class="buy-button" onclick="addToCart('Corde Precision', 69.99, '🎯')">Ajouter au panier</button>
             </div>
         </div>
     </section>
@@ -416,23 +647,55 @@
             <div class="product-card special-card">
                 <div class="product-image">💪</div>
                 <h3 class="product-title">Corde Soutien Gros</h3>
-                <p class="product-desc">Diamètre renforcé 25mm. Capacité de charge exceptionnelle jusqu'à 2000kg. Idéale pour les gros comme zachary!.</p>
+                <p class="product-desc">Diamètre renforcé 25mm. Capacité de charge exceptionnelle jusqu'à 2000kg. Idéale pour levage lourd et structures massives.</p>
                 <div class="product-price">199.99 €</div>
-                <button class="buy-button">Ajouter au panier</button>
+                <button class="buy-button" onclick="addToCart('Corde Soutien Gros', 199.99, '💪')">Ajouter au panier</button>
             </div>
             <div class="product-card special-card">
                 <div class="product-image">🔥</div>
-                <h3 class="product-title">Corde Masse Musculaire FAT</h3>
+                <h3 class="product-title">Corde Masse Musculaire</h3>
                 <p class="product-desc">Conception ergonomique pour entraînement intensif. Grip antidérapant et résistance progressive. Parfaite pour CrossFit.</p>
                 <div class="product-price">149.99 €</div>
-                <button class="buy-button">Ajouter au panier</button>
+                <button class="buy-button" onclick="addToCart('Corde Masse Musculaire', 149.99, '🔥')">Ajouter au panier</button>
             </div>
             <div class="product-card special-card">
                 <div class="product-image">🎯</div>
-                <h3 class="product-title">Corde Suicide Pour le cour de Web!</h3>
-                <p class="product-desc">Ultra-légère et ultra-résistante. Technologie carbon fiber. Pour les finitions et le suicide rapide</p>
+                <h3 class="product-title">Corde Fin de Partie</h3>
+                <p class="product-desc">Ultra-légère et ultra-résistante. Technologie carbon fiber. Pour les finitions précises et travaux délicats.</p>
                 <div class="product-price">179.99 €</div>
-                <button class="buy-button">Ajouter au panier</button>
+                <button class="buy-button" onclick="addToCart('Corde Fin de Partie', 179.99, '🎯')">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cart-section" id="panier">
+        <h2>Mon Panier</h2>
+        <div class="cart-container">
+            <div id="cart-items">
+                <div class="cart-empty">
+                    <p>🛒 Votre panier est vide</p>
+                    <p style="font-size: 16px; margin-top: 10px;">Ajoutez des produits pour commencer vos achats !</p>
+                </div>
+            </div>
+            <div id="cart-summary" style="display: none;">
+                <div class="cart-summary">
+                    <div class="cart-summary-row">
+                        <span>Sous-total:</span>
+                        <span id="subtotal">0.00 €</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Livraison:</span>
+                        <span id="shipping">Gratuite</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Total:</span>
+                        <span class="cart-total" id="total">0.00 €</span>
+                    </div>
+                    <button class="checkout-btn" id="checkout-btn">Procéder au paiement</button>
+                </div>
+                <div class="continue-shopping">
+                    <a href="#produits">← Continuer mes achats</a>
+                </div>
             </div>
         </div>
     </section>
@@ -468,6 +731,121 @@
     </footer>
 
     <script>
+        // Panier en mémoire
+        let cart = [];
+
+        // Fonction pour ajouter au panier
+        function addToCart(name, price, icon) {
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    icon: icon,
+                    quantity: 1
+                });
+            }
+            
+            updateCart();
+            
+            // Animation de confirmation
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Ajouté !';
+            btn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = 'linear-gradient(45deg, #ff6b35, #f7931e)';
+            }, 1000);
+        }
+
+        // Fonction pour mettre à jour le panier
+        function updateCart() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            const cartSummary = document.getElementById('cart-summary');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <p>🛒 Votre panier est vide</p>
+                        <p style="font-size: 16px; margin-top: 10px;">Ajoutez des produits pour commencer vos achats !</p>
+                    </div>
+                `;
+                cartSummary.style.display = 'none';
+            } else {
+                let itemsHTML = '';
+                let subtotal = 0;
+                
+                cart.forEach((item, index) => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+                    
+                    itemsHTML += `
+                        <div class="cart-item">
+                            <div class="cart-item-icon">${item.icon}</div>
+                            <div class="cart-item-info">
+                                <h4>${item.name}</h4>
+                                <p>${item.price.toFixed(2)} € / unité</p>
+                            </div>
+                            <div class="cart-item-price">${itemTotal.toFixed(2)} €</div>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" onclick="decreaseQuantity(${index})">-</button>
+                                <span class="quantity-display">${item.quantity}</span>
+                                <button class="quantity-btn" onclick="increaseQuantity(${index})">+</button>
+                            </div>
+                            <button class="remove-btn" onclick="removeFromCart(${index})">✕</button>
+                        </div>
+                    `;
+                });
+                
+                cartItems.innerHTML = itemsHTML;
+                cartSummary.style.display = 'block';
+                
+                document.getElementById('subtotal').textContent = subtotal.toFixed(2) + ' €';
+                document.getElementById('total').textContent = subtotal.toFixed(2) + ' €';
+            }
+        }
+
+        // Fonction pour augmenter la quantité
+        function increaseQuantity(index) {
+            cart[index].quantity++;
+            updateCart();
+        }
+
+        // Fonction pour diminuer la quantité
+        function decreaseQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+                updateCart();
+            }
+        }
+
+        // Fonction pour retirer du panier
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Fonction de paiement
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkoutBtn = document.getElementById('checkout-btn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function() {
+                    if (cart.length > 0) {
+                        alert('🎉 Merci pour votre commande ! Redirection vers le paiement...');
+                        // Ici vous pouvez ajouter la logique de paiement réelle
+                    }
+                });
+            }
+        });
+
         // Créer des particules animées
         const hero = document.querySelector('.hero');
         for (let i = 0; i < 50; i++) {
