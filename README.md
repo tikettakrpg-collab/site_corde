@@ -74,9 +74,10 @@
             font-size: 28px;
             font-weight: bold;
             background: linear-gradient(45deg, #ff6b35, #f7931e);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+            color: transparent;
         }
 
         .nav-links {
@@ -129,8 +130,10 @@
             font-size: 72px;
             margin-bottom: 20px;
             background: linear-gradient(45deg, #fff, #ff6b35);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: transparent;
             animation: glow 2s ease-in-out infinite;
         }
 
@@ -193,8 +196,10 @@
             font-size: 48px;
             margin-bottom: 60px;
             background: linear-gradient(45deg, #fff, #ff6b35);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: transparent;
         }
 
         .product-grid {
@@ -311,8 +316,10 @@
             font-size: 48px;
             margin-bottom: 60px;
             background: linear-gradient(45deg, #fff, #ff6b35);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: transparent;
         }
 
         .feature-grid {
@@ -397,6 +404,34 @@
                 <h3 class="product-title">Corde Precision</h3>
                 <p class="product-desc">Légère et maniable. Idéale pour les travaux de précision.</p>
                 <div class="product-price">69.99 €</div>
+                <button class="buy-button">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products special-section" id="zachary">
+        <h2>Collection Spéciale Zachary</h2>
+        <p style="text-align: center; color: #aaa; margin-bottom: 60px; font-size: 18px;">Des cordes conçues pour des besoins spécifiques et performances optimales</p>
+        <div class="product-grid">
+            <div class="product-card special-card">
+                <div class="product-image">💪</div>
+                <h3 class="product-title">Corde Soutien Gros</h3>
+                <p class="product-desc">Diamètre renforcé 25mm. Capacité de charge exceptionnelle jusqu'à 2000kg. Idéale pour les gros comme zachary!.</p>
+                <div class="product-price">199.99 €</div>
+                <button class="buy-button">Ajouter au panier</button>
+            </div>
+            <div class="product-card special-card">
+                <div class="product-image">🔥</div>
+                <h3 class="product-title">Corde Masse Musculaire FAT</h3>
+                <p class="product-desc">Conception ergonomique pour entraînement intensif. Grip antidérapant et résistance progressive. Parfaite pour CrossFit.</p>
+                <div class="product-price">149.99 €</div>
+                <button class="buy-button">Ajouter au panier</button>
+            </div>
+            <div class="product-card special-card">
+                <div class="product-image">🎯</div>
+                <h3 class="product-title">Corde Suicide Pour le cour de Web!</h3>
+                <p class="product-desc">Ultra-légère et ultra-résistante. Technologie carbon fiber. Pour les finitions et le suicide rapide</p>
+                <div class="product-price">179.99 €</div>
                 <button class="buy-button">Ajouter au panier</button>
             </div>
         </div>
