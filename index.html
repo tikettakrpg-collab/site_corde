@@ -207,6 +207,55 @@
             box-shadow: 0 20px 60px rgba(255, 107, 53, 0.5);
         }
 
+        .agriculture-section {
+            background: linear-gradient(135deg, rgba(139, 195, 74, 0.15) 0%, rgba(104, 159, 56, 0.1) 100%);
+            border-top: 2px solid rgba(139, 195, 74, 0.4);
+            border-bottom: 2px solid rgba(139, 195, 74, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .agriculture-section::before {
+            content: '🌾';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.03;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%) rotate(-15deg);
+        }
+
+        .agriculture-section::after {
+            content: '🌾';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.03;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%) rotate(15deg);
+        }
+
+        .agriculture-card {
+            border: 2px solid rgba(139, 195, 74, 0.3);
+            background: rgba(139, 195, 74, 0.05);
+        }
+
+        .agriculture-card:hover {
+            border-color: rgba(139, 195, 74, 0.8);
+            box-shadow: 0 20px 60px rgba(139, 195, 74, 0.4);
+        }
+
+        .agriculture-section h2 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #8BC34A);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
         .cart-link {
             background: linear-gradient(45deg, #ff6b35, #f7931e);
             padding: 10px 20px;
@@ -598,6 +647,7 @@
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#produits">Produits</a></li>
             <li><a href="#zachary">Spécial Zachary</a></li>
+            <li><a href="#agriculture">Agriculture</a></li>
             <li><a href="#features">Avantages</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#panier" class="cart-link">🛒 Panier (<span id="cart-count">0</span>)</a></li>
@@ -664,6 +714,34 @@
                 <p class="product-desc">Ultra-légère et ultra-résistante. Technologie carbon fiber. Pour les finitions précises et travaux délicats.</p>
                 <div class="product-price">179.99 €</div>
                 <button class="buy-button" onclick="addToCart('Corde Fin de Partie', 179.99, '🎯')">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products agriculture-section" id="agriculture">
+        <h2>Collection Agriculture</h2>
+        <p style="text-align: center; color: #aaa; margin-bottom: 60px; font-size: 18px;">🌾 Cordes spécialement conçues pour les travaux agricoles et les champs</p>
+        <div class="product-grid">
+            <div class="product-card agriculture-card">
+                <div class="product-image">🌾</div>
+                <h3 class="product-title">Corde Champs de Coton</h3>
+                <p class="product-desc">Fibre naturelle biodégradable. Résistante à l'humidité et aux variations climatiques. Idéale pour le balisage et l'attache des plants de coton.</p>
+                <div class="product-price">79.99 €</div>
+                <button class="buy-button" onclick="addToCart('Corde Champs de Coton', 79.99, '🌾')">Ajouter au panier</button>
+            </div>
+            <div class="product-card agriculture-card">
+                <div class="product-image">🌾</div>
+                <h3 class="product-title">Corde Champs de Blé</h3>
+                <p class="product-desc">Traitement anti-UV renforcé. Parfaite pour les grandes cultures céréalières. Résiste aux frottements répétés des machines agricoles.</p>
+                <div class="product-price">84.99 €</div>
+                <button class="buy-button" onclick="addToCart('Corde Champs de Blé', 84.99, '🌾')">Ajouter au panier</button>
+            </div>
+            <div class="product-card agriculture-card">
+                <div class="product-image">🚜</div>
+                <h3 class="product-title">Corde Multi-Cultures</h3>
+                <p class="product-desc">Polyvalente pour tous types de cultures. Extra-résistante aux intempéries. Traçabilité et marquage inclus pour gestion optimale.</p>
+                <div class="product-price">94.99 €</div>
+                <button class="buy-button" onclick="addToCart('Corde Multi-Cultures', 94.99, '🚜')">Ajouter au panier</button>
             </div>
         </div>
     </section>
@@ -901,4 +979,5 @@
     </script>
 </body>
 </html>
+
 
