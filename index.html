@@ -256,6 +256,466 @@
             color: transparent;
         }
 
+        .vip-section {
+            padding: 100px 50px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vip-section::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.1), transparent 40%),
+                        radial-gradient(circle at 70% 50%, rgba(192, 192, 192, 0.1), transparent 40%);
+            animation: vipPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes vipPulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        .vip-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 215, 0, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            animation: vipFloat 8s infinite;
+        }
+
+        @keyframes vipFloat {
+            0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+            10% { opacity: 1; }
+            50% { transform: translateY(-50vh) translateX(100px) scale(1.5); opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(200px) scale(0.5); opacity: 0; }
+        }
+
+        .vip-section h2 {
+            text-align: center;
+            font-size: 56px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            animation: shimmerGold 3s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes shimmerGold {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)); }
+            50% { filter: drop-shadow(0 0 40px rgba(255, 215, 0, 1)); }
+        }
+
+        .vip-subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 60px;
+            font-size: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .vip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .vip-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 25px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid;
+        }
+
+        .vip-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.8s;
+        }
+
+        .vip-card:hover::before {
+            left: 100%;
+        }
+
+        .vip-card:hover {
+            transform: translateY(-15px) scale(1.02);
+        }
+
+        .vip-wood {
+            border-color: rgba(139, 90, 43, 0.5);
+            background: linear-gradient(135deg, rgba(139, 90, 43, 0.1), rgba(101, 67, 33, 0.05));
+        }
+
+        .vip-wood:hover {
+            border-color: rgba(139, 90, 43, 1);
+            box-shadow: 0 25px 70px rgba(139, 90, 43, 0.4);
+        }
+
+        .vip-bronze {
+            border-color: rgba(205, 127, 50, 0.5);
+            background: linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(184, 115, 51, 0.05));
+        }
+
+        .vip-bronze:hover {
+            border-color: rgba(205, 127, 50, 1);
+            box-shadow: 0 25px 70px rgba(205, 127, 50, 0.4);
+        }
+
+        .vip-silver {
+            border-color: rgba(192, 192, 192, 0.5);
+            background: linear-gradient(135deg, rgba(192, 192, 192, 0.1), rgba(169, 169, 169, 0.05));
+        }
+
+        .vip-silver:hover {
+            border-color: rgba(192, 192, 192, 1);
+            box-shadow: 0 25px 70px rgba(192, 192, 192, 0.5);
+        }
+
+        .vip-gold {
+            border-color: rgba(255, 215, 0, 0.5);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(218, 165, 32, 0.05));
+        }
+
+        .vip-gold:hover {
+            border-color: rgba(255, 215, 0, 1);
+            box-shadow: 0 25px 70px rgba(255, 215, 0, 0.6);
+        }
+
+        .vip-platinum {
+            border-color: rgba(229, 228, 226, 0.5);
+            background: linear-gradient(135deg, rgba(229, 228, 226, 0.15), rgba(181, 179, 176, 0.05));
+        }
+
+        .vip-platinum:hover {
+            border-color: rgba(229, 228, 226, 1);
+            box-shadow: 0 25px 70px rgba(229, 228, 226, 0.6);
+        }
+
+        .vip-diamond {
+            border-color: rgba(185, 242, 255, 0.5);
+            background: linear-gradient(135deg, rgba(185, 242, 255, 0.2), rgba(0, 191, 255, 0.1));
+            position: relative;
+        }
+
+        .vip-diamond::after {
+            content: '💎';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            opacity: 0.3;
+            animation: rotateDiamond 4s linear infinite;
+        }
+
+        @keyframes rotateDiamond {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .vip-diamond:hover {
+            border-color: rgba(185, 242, 255, 1);
+            box-shadow: 0 25px 70px rgba(185, 242, 255, 0.8);
+        }
+
+        .vip-contributor {
+            border-color: rgba(138, 43, 226, 0.6);
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.25), rgba(75, 0, 130, 0.15));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vip-contributor::after {
+            content: '👑';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 35px;
+            opacity: 0.4;
+            animation: crownPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes crownPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(10deg); }
+        }
+
+        .vip-contributor::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.4), transparent);
+            animation: contributorSweep 3s infinite;
+        }
+
+        @keyframes contributorSweep {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .vip-contributor:hover {
+            border-color: rgba(138, 43, 226, 1);
+            box-shadow: 0 30px 80px rgba(138, 43, 226, 0.9), 
+                        0 0 50px rgba(138, 43, 226, 0.6) inset;
+            transform: translateY(-20px) scale(1.05);
+        }
+
+        .vip-pillar {
+            border-color: rgba(255, 0, 127, 0.7);
+            background: linear-gradient(135deg, rgba(255, 0, 127, 0.3), rgba(139, 0, 139, 0.2));
+            position: relative;
+            overflow: hidden;
+            animation: pillarGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes pillarGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(255, 0, 127, 0.5); }
+            50% { box-shadow: 0 0 60px rgba(255, 0, 127, 1), 0 0 100px rgba(255, 0, 127, 0.5); }
+        }
+
+        .vip-pillar::after {
+            content: '⚡';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 40px;
+            opacity: 0.5;
+            animation: lightningStrike 1.5s ease-in-out infinite;
+        }
+
+        @keyframes lightningStrike {
+            0%, 100% { transform: scale(1) translateY(0); opacity: 0.5; }
+            10% { transform: scale(1.3) translateY(-5px); opacity: 1; }
+            20% { transform: scale(0.9) translateY(2px); opacity: 0.3; }
+            30% { transform: scale(1.2) translateY(-3px); opacity: 1; }
+        }
+
+        .vip-pillar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 0, 127, 0.6), transparent 30%);
+            animation: pillarRotate 4s linear infinite;
+        }
+
+        @keyframes pillarRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .vip-pillar:hover {
+            border-color: rgba(255, 0, 127, 1);
+            box-shadow: 0 35px 100px rgba(255, 0, 127, 1), 
+                        0 0 80px rgba(255, 0, 127, 0.8) inset,
+                        0 0 150px rgba(139, 0, 139, 0.6);
+            transform: translateY(-25px) scale(1.08);
+        }
+
+        .vip-contributor .vip-title,
+        .vip-pillar .vip-title {
+            position: relative;
+            z-index: 10;
+        }
+
+        .vip-contributor .vip-price { 
+            color: #BA55D3; 
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .vip-pillar .vip-price { 
+            color: #FF1493; 
+            text-shadow: 0 0 30px rgba(255, 0, 127, 1);
+            animation: priceGlow 2s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes priceGlow {
+            0%, 100% { text-shadow: 0 0 30px rgba(255, 0, 127, 1); }
+            50% { text-shadow: 0 0 50px rgba(255, 0, 127, 1), 0 0 70px rgba(139, 0, 139, 0.8); }
+        }
+
+        .vip-contributor .vip-button {
+            background: linear-gradient(45deg, #8B00FF, #BA55D3);
+            color: white;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.5);
+        }
+
+        .vip-contributor .vip-button:hover {
+            box-shadow: 0 15px 50px rgba(138, 43, 226, 0.8);
+        }
+
+        .vip-pillar .vip-button {
+            background: linear-gradient(45deg, #FF1493, #8B008B);
+            color: white;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 40px rgba(255, 0, 127, 0.6);
+            animation: buttonPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes buttonPulse {
+            0%, 100% { box-shadow: 0 10px 40px rgba(255, 0, 127, 0.6); }
+            50% { box-shadow: 0 15px 60px rgba(255, 0, 127, 1); }
+        }
+
+        .vip-pillar .vip-button:hover {
+            box-shadow: 0 20px 70px rgba(255, 0, 127, 1);
+        }
+
+        .legendary-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            z-index: 20;
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.6);
+            animation: badgeFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .vip-icon {
+            font-size: 60px;
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .vip-title {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .vip-price {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .vip-wood .vip-price { color: #8B5A2B; }
+        .vip-bronze .vip-price { color: #CD7F32; }
+        .vip-silver .vip-price { color: #C0C0C0; }
+        .vip-gold .vip-price { color: #FFD700; }
+        .vip-platinum .vip-price { color: #E5E4E2; }
+        .vip-diamond .vip-price { color: #B9F2FF; }
+
+        .vip-benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .vip-benefits li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ddd;
+        }
+
+        .vip-benefits li::before {
+            content: '✓';
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .vip-button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .vip-wood .vip-button {
+            background: linear-gradient(45deg, #8B5A2B, #654321);
+            color: white;
+        }
+
+        .vip-bronze .vip-button {
+            background: linear-gradient(45deg, #CD7F32, #B87333);
+            color: white;
+        }
+
+        .vip-silver .vip-button {
+            background: linear-gradient(45deg, #C0C0C0, #A9A9A9);
+            color: #333;
+        }
+
+        .vip-gold .vip-button {
+            background: linear-gradient(45deg, #FFD700, #DAA520);
+            color: #333;
+        }
+
+        .vip-platinum .vip-button {
+            background: linear-gradient(45deg, #E5E4E2, #B5B3B0);
+            color: #333;
+        }
+
+        .vip-diamond .vip-button {
+            background: linear-gradient(45deg, #B9F2FF, #00BFFF);
+            color: #333;
+        }
+
+        .vip-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+        }
+
         .cart-link {
             background: linear-gradient(45deg, #ff6b35, #f7931e);
             padding: 10px 20px;
@@ -648,6 +1108,7 @@
             <li><a href="#produits">Produits</a></li>
             <li><a href="#zachary">Spécial Zachary</a></li>
             <li><a href="#agriculture">Agriculture</a></li>
+            <li><a href="#vip">VIP Club</a></li>
             <li><a href="#features">Avantages</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#panier" class="cart-link">🛒 Panier (<span id="cart-count">0</span>)</a></li>
@@ -742,6 +1203,150 @@
                 <p class="product-desc">Polyvalente pour tous types de cultures. Extra-résistante aux intempéries. Traçabilité et marquage inclus pour gestion optimale.</p>
                 <div class="product-price">94.99 €</div>
                 <button class="buy-button" onclick="addToCart('Corde Multi-Cultures', 94.99, '🚜')">Ajouter au panier</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="vip-section" id="vip">
+        <h2>🌟 Club VIP RopeX 🌟</h2>
+        <p class="vip-subtitle">Rejoignez notre programme exclusif et profitez d'avantages exceptionnels</p>
+        
+        <div class="vip-grid">
+            <div class="vip-card vip-wood">
+                <span class="vip-icon">🪵</span>
+                <h3 class="vip-title">Wood</h3>
+                <div class="vip-price">Gratuit</div>
+                <ul class="vip-benefits">
+                    <li>Accès au catalogue complet</li>
+                    <li>Newsletter mensuelle</li>
+                    <li>Support client standard</li>
+                    <li>Garantie 1 an</li>
+                </ul>
+                <button class="vip-button">S'inscrire</button>
+            </div>
+
+            <div class="vip-card vip-bronze">
+                <span class="vip-icon">🥉</span>
+                <h3 class="vip-title">Bronze</h3>
+                <div class="vip-price">29€/an</div>
+                <ul class="vip-benefits">
+                    <li>5% de réduction</li>
+                    <li>Livraison gratuite dès 50€</li>
+                    <li>Support prioritaire</li>
+                    <li>Garantie 2 ans</li>
+                    <li>Accès ventes privées</li>
+                </ul>
+                <button class="vip-button">Devenir Bronze</button>
+            </div>
+
+            <div class="vip-card vip-silver">
+                <span class="vip-icon">🥈</span>
+                <h3 class="vip-title">Silver</h3>
+                <div class="vip-price">59€/an</div>
+                <ul class="vip-benefits">
+                    <li>10% de réduction</li>
+                    <li>Livraison gratuite illimitée</li>
+                    <li>Support prioritaire 24/7</li>
+                    <li>Garantie 3 ans</li>
+                    <li>Produits exclusifs</li>
+                    <li>Programme de parrainage</li>
+                </ul>
+                <button class="vip-button">Devenir Silver</button>
+            </div>
+
+            <div class="vip-card vip-gold">
+                <span class="vip-icon">🥇</span>
+                <h3 class="vip-title">Gold</h3>
+                <div class="vip-price">99€/an</div>
+                <ul class="vip-benefits">
+                    <li>15% de réduction</li>
+                    <li>Livraison express gratuite</li>
+                    <li>Support VIP dédié</li>
+                    <li>Garantie 5 ans</li>
+                    <li>Collections en avant-première</li>
+                    <li>Personnalisation gratuite</li>
+                    <li>Cadeau d'anniversaire</li>
+                </ul>
+                <button class="vip-button">Devenir Gold</button>
+            </div>
+
+            <div class="vip-card vip-platinum">
+                <span class="vip-icon">⭐</span>
+                <h3 class="vip-title">Platinum</h3>
+                <div class="vip-price">199€/an</div>
+                <ul class="vip-benefits">
+                    <li>20% de réduction</li>
+                    <li>Livraison premium internationale</li>
+                    <li>Conseiller personnel dédié</li>
+                    <li>Garantie à vie</li>
+                    <li>Invitations événements exclusifs</li>
+                    <li>Personnalisation illimitée</li>
+                    <li>Retours gratuits à vie</li>
+                    <li>Points de fidélité x3</li>
+                </ul>
+                <button class="vip-button">Devenir Platinum</button>
+            </div>
+
+            <div class="vip-card vip-diamond">
+                <span class="vip-icon">💎</span>
+                <h3 class="vip-title">Diamond</h3>
+                <div class="vip-price">499€/an</div>
+                <ul class="vip-benefits">
+                    <li>30% de réduction sur tout</li>
+                    <li>Livraison ultra-premium mondiale</li>
+                    <li>Concierge personnel 24/7</li>
+                    <li>Garantie absolue à vie</li>
+                    <li>Accès usine & fabrication</li>
+                    <li>Conception sur mesure</li>
+                    <li>Cadeaux mensuels exclusifs</li>
+                    <li>Points de fidélité x5</li>
+                    <li>Statut VIP permanent</li>
+                </ul>
+                <button class="vip-button">Devenir Diamond</button>
+            </div>
+
+            <div class="vip-card vip-contributor">
+                <div class="legendary-badge">🌟 LÉGENDAIRE 🌟</div>
+                <span class="vip-icon">👑</span>
+                <h3 class="vip-title">Contributeur</h3>
+                <div class="vip-price">999€/an</div>
+                <ul class="vip-benefits">
+                    <li>40% de réduction permanente</li>
+                    <li>Livraison express mondiale gratuite</li>
+                    <li>Équipe dédiée personnelle</li>
+                    <li>Garantie premium à vie</li>
+                    <li>Participation au développement produits</li>
+                    <li>Accès laboratoire R&D</li>
+                    <li>Prototypes en exclusivité</li>
+                    <li>Collections capsule personnalisées</li>
+                    <li>Événements VIP internationaux</li>
+                    <li>Points de fidélité x10</li>
+                    <li>Badge contributeur officiel</li>
+                </ul>
+                <button class="vip-button">Devenir Contributeur</button>
+            </div>
+
+            <div class="vip-card vip-pillar">
+                <div class="legendary-badge" style="background: linear-gradient(45deg, #FF1493, #8B008B);">⚡ MYTHIQUE ⚡</div>
+                <span class="vip-icon">⚡👑⚡</span>
+                <h3 class="vip-title">Pilier</h3>
+                <div class="vip-price">2499€/an</div>
+                <ul class="vip-benefits">
+                    <li>50% de réduction sur TOUT</li>
+                    <li>Jet privé pour livraisons</li>
+                    <li>PDG disponible directement</li>
+                    <li>Garantie infinie absolue</li>
+                    <li>Co-création de gammes exclusives</li>
+                    <li>Bureau dans nos locaux</li>
+                    <li>Actions de l'entreprise offertes</li>
+                    <li>Revenus passifs sur ventes</li>
+                    <li>Influence stratégique directe</li>
+                    <li>Éditions limitées à votre nom</li>
+                    <li>Points de fidélité x20</li>
+                    <li>Statut immortel dans l'histoire</li>
+                    <li>Carte noire illimitée RopeX</li>
+                </ul>
+                <button class="vip-button">Devenir Pilier</button>
             </div>
         </div>
     </section>
@@ -935,6 +1540,41 @@
             hero.appendChild(particle);
         }
 
+        // Créer des particules VIP
+        const vipSection = document.querySelector('.vip-section');
+        if (vipSection) {
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'vip-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                
+                // Varier les couleurs des particules
+                const colors = ['rgba(255, 215, 0, 0.8)', 'rgba(192, 192, 192, 0.8)', 'rgba(185, 242, 255, 0.8)', 'rgba(229, 228, 226, 0.8)'];
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                
+                vipSection.appendChild(particle);
+            }
+
+            // Particules spéciales pour Contributeur et Pilier
+            for (let i = 0; i < 20; i++) {
+                const legendaryParticle = document.createElement('div');
+                legendaryParticle.className = 'vip-particle';
+                legendaryParticle.style.left = Math.random() * 100 + '%';
+                legendaryParticle.style.animationDelay = Math.random() * 6 + 's';
+                legendaryParticle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+                legendaryParticle.style.width = '6px';
+                legendaryParticle.style.height = '6px';
+                
+                const legendaryColors = ['rgba(138, 43, 226, 1)', 'rgba(255, 0, 127, 1)', 'rgba(186, 85, 211, 1)'];
+                legendaryParticle.style.background = legendaryColors[Math.floor(Math.random() * legendaryColors.length)];
+                legendaryParticle.style.boxShadow = `0 0 20px ${legendaryColors[Math.floor(Math.random() * legendaryColors.length)]}`;
+                
+                vipSection.appendChild(legendaryParticle);
+            }
+        }
+
         // Animation smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -961,7 +1601,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.product-card, .feature-item').forEach(el => {
+        document.querySelectorAll('.product-card, .feature-item, .vip-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease-out';
